@@ -1,4 +1,4 @@
-package com.developeruz.dagger2starter.ui.fragments.auth
+package com.developeruz.dagger2starter.network.repo
 
 import com.developeruz.dagger2starter.network.api.AuthService
 import com.developeruz.dagger2starter.network.models.auth.signIn.SignInRequest

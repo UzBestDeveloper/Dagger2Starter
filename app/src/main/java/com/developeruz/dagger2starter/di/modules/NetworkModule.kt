@@ -24,7 +24,6 @@ class NetworkModule {
     @Provides
     fun provideAuthService(retrofit: Retrofit): AuthService =  retrofit.create()
 
-
     @Singleton
     @Provides
     fun provideRetrofit(factory: MoshiConverterFactory, okHttpClient: OkHttpClient): Retrofit {
@@ -59,7 +58,7 @@ class NetworkModule {
     ): OkHttpClient {
         return OkHttpClient.Builder()
             .addInterceptor(loggingInterceptor)
-            .connectTimeout(10, TimeUnit.SECONDS)
+            .connectTimeout(20, TimeUnit.SECONDS)
             .writeTimeout(10, TimeUnit.SECONDS)
             .readTimeout(30, TimeUnit.SECONDS)
             .build()

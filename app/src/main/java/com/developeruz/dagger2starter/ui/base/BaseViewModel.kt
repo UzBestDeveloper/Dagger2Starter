@@ -16,7 +16,7 @@ abstract class BaseViewModel : ViewModel() {
     private val _loader = MutableLiveData<Boolean>()
     val loader: LiveData<Boolean> get() = _loader
 
-    val _errorData = SingleEvent<ErrorData>()
+    private val _errorData = SingleEvent<ErrorData>()
     val errorData: LiveData<ErrorData> get() = _errorData
 
     fun <T> Flow<T>.proceed(action: suspend (T) -> Unit = { }): Job {
